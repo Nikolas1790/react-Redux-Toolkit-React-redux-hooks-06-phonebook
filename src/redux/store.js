@@ -1,25 +1,36 @@
-// import { configureStore } from '@reduxjs/toolkit'
-// import { createAction, createReducer } from '@reduxjs/toolkit'
-
-// const increment = createAction('myValue/increment')
-// // console.log(increment(100))
-// const myReducer = createReducer(10, {
-//     [increment]: (state, action)=> state + action.payload,
-// })
-
-// export const store = configureStore({
-//   reducer: {
-//     myValue: myReducer,
-//   },
-// })
 
 import { configureStore } from "@reduxjs/toolkit";
 import { contactReduce } from "./contactSlice";
-// import { filterReducer } from "./filterSlice";
+
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage' 
+
 
 export const store = configureStore({
   reducer:{
-    contacts: contactReduce,
-  
+    contacts: contactReduce,  
   }
 })
+
+ 
+
+ 
+// const persistConfig = {
+//   key: 'root',
+//   storage,
+// }
+ 
+// const persistedReducer = persistReducer(persistConfig, contactReduce)
+ 
+
+
+// const persistConfig = {
+//   key: 'root',
+//   storage,
+// }
+ 
+// const persistedReducer = persistReducer(persistConfig, contactReduce)
+ 
+// export const store = configureStore({contactReduce: persistedReducer})
+
+// export const persistor = persistStore(store)
