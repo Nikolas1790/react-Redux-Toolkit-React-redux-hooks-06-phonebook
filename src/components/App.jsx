@@ -51,8 +51,9 @@ return (
         <h1>Phonebook</h1>
         <ContactForm onSubmit={formSubmitHendle}/> 
         <h2>Contacts</h2>
-        <Filter handleImputFilter={handleImputFilter} value={filter}/>  
+        <Filter handleImputFilter={handleImputFilter} value={filter} />  
         <ContactList options={getVisibleItems()} onDeleteContact={deleteItem}/>
       </div>
 )
 }
+// handleImputFilter={handleImputFilter} value={filter}
