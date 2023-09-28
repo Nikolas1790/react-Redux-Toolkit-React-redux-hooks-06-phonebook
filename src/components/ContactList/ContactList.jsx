@@ -13,8 +13,6 @@ export const ContactList =() => {
     dispatch(deleteTask(id))
 }
 const getVisibleItems =  itemValue.filter(contact => contact.name.toLowerCase().includes(filterValue.toLowerCase()))
-
-
   
     return(
     <div>
@@ -29,19 +27,3 @@ const getVisibleItems =  itemValue.filter(contact => contact.name.toLowerCase().
     </div>
 )}
 
-// import { ButtonDel, ItemContact, ItemsContracts } from "components/App.styled"
-
-// export const ContactList =({options, onDeleteContact}) => {
-  
-//     return(
-//     <div>
-//         <ItemsContracts>          
-//           {options.map(({id, name, number}) =>(
-//             <ItemContact key={id}>{name}: {number}
-//             <ButtonDel onClick={() => onDeleteContact(id)}>
-//               Delete</ButtonDel>
-//             </ItemContact>
-//          ) )}
-//         </ItemsContracts>
-//     </div>
-// )}

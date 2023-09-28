@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 export const FormTable = styled.form`
-
 display: flex;
-  flex-direction: column;
+align-items: center;
+justify-content: center;
+flex-direction: column;
      
 border: 1.5px solid rgb(171, 163, 163);
 width: 400px;
 padding: 8px;
-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
 `
 
 export const ButtonAddContact = styled.button`
@@ -55,8 +55,8 @@ list-style: none;
 
 display: flex;
 flex-direction: column;
-
-gap: 8px;
+padding:0;
+gap: 12px;
 `
 
 export const ItemContact = styled.li`
@@ -87,4 +87,12 @@ transition: box-shadow 250ms linear;
 export const FindContact = styled.p`
 margin: 4px;
 font-weight: 500;
+`
+
+export const WraperDiv = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
 `
