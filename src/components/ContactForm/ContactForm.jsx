@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { getItems} from "redux/selectors";
 import { addTask } from "redux/contactSlice";
-import { nanoid } from 'nanoid'
+// import { nanoid } from 'nanoid'
 import { ButtonAddContact, FormTable, InputInfToAdd, Label } from "components/App.styled";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer} from "react-toastify"; 
@@ -32,7 +32,7 @@ export const ContactForm = () => {
 
   const handleAddContact = e => {
     e.preventDefault();
-    const id = nanoid();
+    // const id = nanoid();
     const returnContact = itemValue.find(contact => contact.name.toLowerCase().includes(name.toLowerCase()) );
 
     if(returnContact){
@@ -40,7 +40,7 @@ export const ContactForm = () => {
       return toast.error(`${name} is already in contacts`);   
      }
     
-    dispatch(addTask({name, number, id}))  
+    dispatch(addTask({name, number}))  
     reset();
   }
 

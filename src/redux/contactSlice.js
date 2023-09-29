@@ -2,13 +2,25 @@ import { createSlice } from "@reduxjs/toolkit";
 import { initialState } from "./initialState";
 import storage from 'redux-persist/lib/storage';
 import persistReducer from "redux-persist/es/persistReducer";
+import { nanoid } from "nanoid";
 
 const contactList = createSlice({
     name: 'contacts',
     initialState,
     reducers: {
-        addTask(state, action) {
-            state.items.push(action.payload);
+        addTask: {
+            reducer(state, action) {
+               state.items.push(action.payload);
+            },
+            prepare({name, number}) {
+                return {
+                    payload: {
+                        id: nanoid(),
+                        name,
+                        number,
+                    }
+                }
+            }        
         },
         deleteTask(state, action) {
             const index = state.items.findIndex(task => task.id === action.payload);
