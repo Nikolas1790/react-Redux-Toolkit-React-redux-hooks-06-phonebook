@@ -5,12 +5,12 @@ import {WraperDiv } from "./App.styled"
 
 export const App = () =>{
 return (
-      <WraperDiv>
+    <WraperDiv>
         <h1>Phonebook</h1>
         <ContactForm /> 
         <h2>Contacts</h2>
         <Filter  />  
         <ContactList />
-        </WraperDiv>
+    </WraperDiv>
 )
 }
