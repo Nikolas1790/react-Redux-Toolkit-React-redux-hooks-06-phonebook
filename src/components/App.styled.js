@@ -96,3 +96,16 @@ justify-content: center;
 flex-direction: column;
 
 `
+
+
+export const FormContacts = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+     
+border: 1.5px solid rgb(171, 163, 163);
+width: 400px;
+padding: 8px;
+box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+`
