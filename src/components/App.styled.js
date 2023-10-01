@@ -37,13 +37,12 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 
 
 export const Label = styled.label`
- display: block;
+  display: block;
   margin-bottom: 12px;
   font-size: 20px;  
 `
 export const InputInfToAdd = styled.input` 
-  width: 380px;
-  
+  width: 380px;  
   padding: 8px;
   border-radius: 4px;
   border: 1.5px solid rgb(171, 163, 163); 
@@ -52,7 +51,6 @@ export const InputInfToAdd = styled.input`
 
 export const ItemsContracts = styled.ul`
 list-style: none;
-
 display: flex;
 flex-direction: column;
 padding:0;
