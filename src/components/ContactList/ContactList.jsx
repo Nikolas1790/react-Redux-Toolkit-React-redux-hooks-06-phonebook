@@ -11,17 +11,17 @@ export const ContactList =() => {
 
   const onDeleteContact = (id) => {
     dispatch(deleteTask(id))
-}
-const getVisibleItems =  itemValue.filter(contact => contact.name.toLowerCase().includes(filterValue.toLowerCase()))
+  }
+  const getVisibleItems =  itemValue.filter(contact => contact.name.toLowerCase().includes(filterValue.toLowerCase()))
   
-    return(
+  return(
     <div>
-        <ItemsContracts>          
-          {getVisibleItems.map(({id, name, number}) =>(
-            <ItemContact key={id}>{name}: {number}
+      <ItemsContracts>          
+        {getVisibleItems.map(({id, name, number}) =>(
+          <ItemContact key={id}>{name}: {number}
             <ButtonDel onClick={() => onDeleteContact(id)}> 
               Delete</ButtonDel>
-            </ItemContact>
+          </ItemContact>
          ) )}
         </ItemsContracts>
     </div>

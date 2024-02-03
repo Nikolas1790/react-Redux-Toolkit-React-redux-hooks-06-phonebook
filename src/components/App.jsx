@@ -10,8 +10,8 @@ return (
         <ContactForm /> 
         <h2>Contacts</h2>
         <FormContacts>
-        <Filter  />  
-        <ContactList />
+            <Filter  />  
+            <ContactList />
         </FormContacts>
     </WraperDiv>
 )
